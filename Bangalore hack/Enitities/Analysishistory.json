@@ -1,0 +1,39 @@
+{
+  "name": "AnalysisHistory",
+  "type": "object",
+  "properties": {
+    "original_text": {
+      "type": "string",
+      "description": "The original message analyzed"
+    },
+    "emotion": {
+      "type": "string",
+      "description": "Detected emotion (joy, anger, sadness, frustration, calm, etc.)"
+    },
+    "empathy_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Empathy score from 0 to 100"
+    },
+    "feedback": {
+      "type": "string",
+      "description": "AI feedback about the message tone"
+    },
+    "rewritten_text": {
+      "type": "string",
+      "description": "Empathetic rewrite of the message"
+    },
+    "was_speech": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this was from speech input"
+    }
+  },
+  "required": [
+    "original_text",
+    "emotion",
+    "empathy_score",
+    "feedback"
+  ]
+}

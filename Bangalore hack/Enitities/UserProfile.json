@@ -1,0 +1,60 @@
+{
+  "name": "UserProfile",
+  "type": "object",
+  "properties": {
+    "display_name": {
+      "type": "string",
+      "description": "User's preferred display name"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "student",
+        "professional",
+        "educator",
+        "parent",
+        "other"
+      ],
+      "description": "User's primary role"
+    },
+    "communication_style": {
+      "type": "string",
+      "enum": [
+        "direct",
+        "indirect",
+        "formal",
+        "informal",
+        "balanced"
+      ],
+      "default": "balanced",
+      "description": "User's preferred communication style"
+    },
+    "default_language": {
+      "type": "string",
+      "default": "English",
+      "description": "User's preferred language for analysis"
+    },
+    "theme_preference": {
+      "type": "string",
+      "enum": [
+        "dark"
+      ],
+      "default": "dark",
+      "description": "Theme preference (dark mode only)"
+    },
+    "accessibility_high_contrast": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable high contrast mode"
+    },
+    "accessibility_large_text": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable larger text"
+    }
+  },
+  "required": [
+    "display_name",
+    "role"
+  ]
+}
